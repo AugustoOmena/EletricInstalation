@@ -8,7 +8,7 @@ using System.IO.Compression;
 
 namespace EletricInstalation.Entities
 {
-    class Casa
+    class registroDaCasa
     {
         public double Altura { get; set; } = 0;
         public double Largura { get; set; } = 0;
@@ -16,12 +16,13 @@ namespace EletricInstalation.Entities
         public int Com1 { get; set; } = 0;
         public int Com2 { get; set; } = 0;
         public int Com3 { get; set; } = 0;
-
+        public int Com4 { get; set; } = 0;
+        public int Com5 { get; set; } = 0;
         public int Repet { get; set; } = 0;
         public string Comod { get; set; } = null;
         public List<int> ComodList { get; set; } = new List<int> ();
 
-        public void Comodos()
+        public void regNumeroDeComodos()
         {
             Console.WriteLine("Quantos salas?");
             Com1 = int.Parse(Console.ReadLine());
@@ -29,12 +30,13 @@ namespace EletricInstalation.Entities
             Com2 = int.Parse(Console.ReadLine());
             Console.WriteLine("Quantas cozinhas?");
             Com3 = int.Parse(Console.ReadLine());
+
             ComodList.Add(Com1);
             ComodList.Add(Com2);
             ComodList.Add(Com3);
         }
         
-        public void Tot()
+        public void regCalculaArea()
         {
             try
             {
@@ -76,7 +78,7 @@ namespace EletricInstalation.Entities
             }
         }
 
-        public string Write()
+        public string regResultado()
         {
             return "O total é: " + Total.ToString("F2", CultureInfo.InvariantCulture) + "M²";
         }

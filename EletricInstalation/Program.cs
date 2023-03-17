@@ -7,10 +7,11 @@ namespace eletricArea
     {
         public static void Main(string[] args)
         {
-            Casa casa = new Casa();
-            casa.Comodos();
-            casa.Tot();
-            Console.WriteLine(casa.Write());
+            registroDaCasa casa = new registroDaCasa();
+            casa.regNumeroDeComodos();
+            casa.regCalculaArea();
+            Console.WriteLine(casa.regResultado());
+            Console.WriteLine("Fim do Projeto");
         }
     }
 }
